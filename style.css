@@ -1,92 +1,85 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
 }
 
-.background {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    width: 400px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+.navbar {
+    background: #2ecc71;
+    padding: 1rem;
     color: white;
     text-align: center;
 }
 
-.card h1 {
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-.input-box {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid white;
-    outline: none;
+.hero {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
     color: white;
-    font-size: 16px;
+    padding: 3rem;
+    text-align: center;
 }
 
-.input-box label {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    color: #ddd;
-    pointer-events: none;
-    transition: 0.3s;
+.upload-section {
+    padding: 2rem;
+    text-align: center;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-    top: -12px;
-    font-size: 12px;
-    color: #00f2fe;
+.upload-container {
+    background: white;
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.drag-drop-area {
+    border: 2px dashed #2ecc71;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.drag-drop-area:hover {
+    background: #eafaf1;
+}
+
+.preview-container img {
+    max-width: 100%;
+    margin: 1rem 0;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
+    padding: 0.7rem 1.5rem;
     border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    background: #2ecc71;
     color: white;
-    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00f2fe;
+    background: #27ae60;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #2ecc71;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.results-section {
+    padding: 2rem;
+    text-align: center;
 }

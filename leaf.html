@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌿 LeafAnalyzer Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>🌿 LeafAnalyzer Pro</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Advanced Leaf Disease Detection</h2>
+            <p>Upload leaf photos and get instant analysis</p>
+        </div>
+    </section>
+
+    <!-- UPLOAD -->
+    <section class="upload-section">
+        <div class="upload-container">
+
+            <div class="drag-drop-area" id="dragDropArea">
+                <input type="file" id="leafImageInput" accept="image/*" hidden>
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drag & Drop Image</h3>
+                <button id="browseBtn" type="button">Browse</button>
+            </div>
+
+            <div class="preview-container" id="previewContainer" style="display:none;">
+                <img id="previewImage">
+                <button id="analyzeBtn">Analyze Leaf</button>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner" style="display:none;">
+                <div class="spinner"></div>
+                <p>Analyzing...</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results-section" style="display:none;">
+        <div class="container">
+            <h2>Results</h2>
+
+            <img id="resultImage">
+
+            <p>Width: <span id="leafWidth"></span></p>
+            <p>Height: <span id="leafHeight"></span></p>
+            <p>Health: <span id="healthPercentage"></span></p>
+
+            <h3 id="diseaseName"></h3>
+            <p id="diseaseDescription"></p>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
